@@ -140,8 +140,8 @@ def send_start(bot, update):
     except:
         pass
     chat = update.effective_chat  # type: Optional[Chat]
-    text = "Heya there, my name is Hinata ! "
-    text += "\ni am the eldest daughter of the Hyuga clan's main branch. "Hyuga" means "toward the sun"i was trained by my father, Hiashi Hyuga, to become the clan's heiress.i am attract by naruto.and than in future....... spoilers..."
+    text = "Heya ! "
+    text += "\ni am "
     text += "\n\nnothing!!!"  
 
     keyboard = [[InlineKeyboardButton(text="❓ Help", callback_data="help_back"),InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")]]
