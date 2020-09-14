@@ -4,7 +4,7 @@ alluka_explain_config: "alluka_zoldyck"
 bot_token: "1340938209:AAE0wXintJ29dtT37zly7febTQQKJGWvoQw"  
 owner_id: 943978681
 api_key: 1438627
-api_hash: 'a3df45b8d3b710a5b15b485381f1adc8 '
+api_hash: 'a3df45b8d3b710a5b15b485381f1adc8'
 owner_username: "Ayanokoji_op"
 database_url: "postgres://zsyltgjf:gnr9oSdXglJfT-A26-2N7WeNW1uLNHX_@hansken.db.elephantsql.com:5432/zsyltgjf"
 message_dump: "chat_id"
