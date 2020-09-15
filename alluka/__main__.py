@@ -141,7 +141,7 @@ def send_start(bot, update):
         pass
     chat = update.effective_chat  # type: Optional[Chat]
     text = "Hey There!\n\n"
-    text += "My Name is **Hinata Hayuga**.\n I Am The Eldest Daughter Of The Hyuga  Clan's Main Branch.\n Hyuga Means Toward The Sun I Was  Trained By My Father, **Hiashi Hyuga**, To  Become The Clan's Heiress.\n I am Attract By **Naruto**, And Than In  Future....... **SPOILERS:-^)**\n\n"
+    text += "My Name is **Hinata Hayuga**.\n I Am The Eldest Daughter Of The Hyuga  Clan's Main Branch.\n Hyuga Means Toward The Sun I Was  Trained By My Father, **Hiashi Hyuga**, To  Become The Clan's Heiress.\n I am Attract By **Naruto**, And Than In  Future....... **SPOILERS :-^)**\n\n"
     text += "Press 🅵 To Start 😉"  
 
     keyboard = [[InlineKeyboardButton(text="❓ Help", callback_data="help_back"),InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")]]
