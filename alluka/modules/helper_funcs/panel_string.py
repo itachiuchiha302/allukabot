@@ -1,23 +1,23 @@
 ALLUKA_IMG = "https://telegra.ph/file/d19f4033e7de6677e7d8a.jpg"
 
 SOURCE_STRING = """
-I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/dev-tg01/allukabot)
+I'm Built In python3, Using The python-telegram-bot library, And Am Fully Opensource - You Can Find What Makes Me Tick [here](https://github.com/dev-tg01/allukabot)
 """
 
 HELP = """
 Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
-*Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /source: Information about my source.
+I'm A Modular Group Management Bot With A Few Fun Extras! Have A Look At The Following For An Idea Of Some Of \
+The Things I Can Help You With.
+*Main* Commands Available:
+ - /start: Start The Bot
+ - /help: PM's You This Message.
+ - /help <module name>: PM's You Info About That Module.
+ - /source: Information About My Source.
  - /settings:
-  - in PM: will send you your settings for all supported modules.
-  - in a group: will redirect you to pm, with all that chat's settings.
+  - in PM: Will Send You Your Settings For All Supported Modules.
+  - in a group: Will Redirect You To Pm, With All That Chat's Settings.
 {}
-And the following:
+And The Following:
 """
 
 
