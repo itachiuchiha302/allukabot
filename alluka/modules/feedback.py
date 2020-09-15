@@ -13,18 +13,18 @@ def feedback(bot: Bot, update: Update):
   name = update.effective_message.from_user.first_name
   message = update.effective_message
   userid=message.from_user.id
-  text = message.text[len('/feedback '):]
+  text = message.text[len('/feedback'):]
    
 
-  feed_text = f"HINATA'S *New* Feedback From [{name}](tg://user?id={userid})\n\nFeed→_→: {text}"
+  feed_text = f"*Hinata's* *New* Feedback From [{name}](tg://user?id={userid})\n\nFeed→一>→ : {text}"
   
 
   bot.send_message(-1001237122568, feed_text, parse_mode=ParseMode.MARKDOWN)
  
   text = html.escape(text)
-  reply_text=f"Thank-You For Giving Us Your Feedback."
+  reply_text=f"Thank-You For Giving Us Your Feedback ;)."
   message.reply_text(reply_text, reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="You Can See Your *Feedback* Here",url="t.me/MissLilly_Support")]]))
+                                                [[InlineKeyboardButton(text="You Can See Your **Feedback** Here",url="t.me/MissLilly_Support")]]))
                                                
   
 
