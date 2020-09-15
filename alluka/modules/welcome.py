@@ -150,7 +150,7 @@ def new_member(bot: Bot, update: Update):
         for new_mem in new_members:
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text("My master has just join your group.")
+                update.effective_message.reply_text("My Master Has Just Join Your Group.")
                 continue
             elif new_mem.id in ALLUKA:
                 update.effective_message.reply_photo(ALLUKA_IMG,"Woah! I just join this family!\n <i>If you're nice to me, you have to be nice to Nanika too!! If you're going to protect me, you have to protect Nanika too!! But if you're going to be mean to Nanika, I hate you!!</i>\n To know about my family do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
@@ -159,7 +159,7 @@ def new_member(bot: Bot, update: Update):
 
             # Welcome SUNNY
             elif new_mem.id in HISOKA:
-                update.effective_message.reply_photo(HISOKA_IMG,"blop! blop! <b>Hisoka Morow</b> join your family!\n <i>'My greatest pleasure comes when such people crumple to their knees and I look down upon their disbelieving faces as their plans fail.♥'</i>\nTo know about my family do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop! <b>Hisoka Morow</b> Join Your Family!\n <i>'My Greatest Pleasure Comes When Such People Crumple To Their Knees And I Look Down Upon Their Disbelieving Faces As Their Plans Fail.♥'</i>\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 bot.send_sticker(chat.id, HISOKA_WELCOME) 
                 continue
             
