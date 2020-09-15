@@ -51,7 +51,7 @@ ILLUMI_ZOLDYCK_IMG = "https://telegra.ph/file/689f2d3b1f5f2ae4d3005.png"
 LEORIO_IMG = "https://telegra.ph/file/16cc60c94d7ff535e3957.png"
 BISCUIT_IMG = "https://telegra.ph/file/f3439e1ea77e6f4a2d6bb.png"
 CHROLLO_IMG = "https://telegra.ph/file/d4888fcbdeb3261a2a9cf.png"
-KILLUA_IMG = "https://telegra.ph/file/335efcdd8ffb462371582.png"
+KILLUA_IMG = "https://telegra.ph/file/1cf42dcd39ff264f5a2f1.jpg"
 MEANII_IMG = "https://telegra.ph/file/633307eb7b142003c096c.jpg"
 MERUEM_IMG = "https://telegra.ph/file/348ae7fcba0116a9a4314.jpg"
 KITE_IMG = "https://telegra.ph/file/520c4b38b71f82e312f5b.png"
@@ -198,7 +198,7 @@ def new_member(bot: Bot, update: Update):
                 continue      
             
             elif new_mem.id in KILLUA:
-                update.effective_message.reply_photo(KILLUA_IMG,"wow!! My bro <b>Killua Zoldyck </b> is just join your family!!\n<i>'I'm so tired of killing... I just want to be a kid. Hanging out, doing stuff with Gon. That's it.'</i> \nTo know about my family do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(KILLUA_IMG,"WOW!! My Master <b>Ayanokōji </b> Is Just Join Your Group!!\n<i>'I Don't Like Expending More Effort Then I Have To.\nAyanokōji Kiyotaka'</i> \n\nTo Koow About My Family - /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 continue       
           
             elif new_mem.id in MERUEM:
