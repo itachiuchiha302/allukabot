@@ -12,7 +12,6 @@ The Things I Can Help You With.
  - /start: Start The Bot
  - /help: PM's You This Message.
  - /help <module name>: PM's You Info About That Module.
- - /source: Information About My Source.
  - /settings:
   - in PM: Will Send You Your Settings For All Supported Modules.
   - in a group: Will Redirect You To Pm, With All That Chat's Settings.
