@@ -130,7 +130,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Yo, whadup? 🙂")
+        update.effective_message.reply_text("Yoo! Whatsupp? 🙃")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -145,7 +145,7 @@ def send_start(bot, update):
     text += "Press `F` To Start:^)"  
 
     keyboard = [[InlineKeyboardButton(text="❓ Help", callback_data="help_back"),InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")]]
-    keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/Miss_hinatabot?startgroup=true"),InlineKeyboardButton(text="👤 Support chat",url="t.me/MissLilly_Support")]]
+    keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/MissHinata_Bot?startgroup=true"),InlineKeyboardButton(text="👤 Support chat",url="t.me/MissLilly_Support")]]
 
     update.effective_message.reply_photo(HELP_PANEL_STRING.ALLUKA_IMG,text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
