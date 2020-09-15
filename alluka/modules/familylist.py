@@ -11,16 +11,16 @@ def ud(bot: Bot, update: Update):
   message = update.effective_message
   text = message.text[len('/familylist '):]
   
-  Devimg = "https://telegra.ph/file/4aee5cfe2ba8a3fa503d0.jpg"
-  Dev = """[Sed Lyf](https://telegram.dog/Ayanokoji_op) as Hisoka Morow.\n To get more about him do `!info @Ayanokoji_op`"""
+  Divuimg = "https://telegra.ph/file/4aee5cfe2ba8a3fa503d0.jpg"
+  Divu = """[Mr.Divu」](https://telegram.dog/imDivu) As Itachi Uchiha.\n To Get More About Him Do `/info @imDivu`"""
 
-  Divuimg = "https://telegra.ph/file/520c4b38b71f82e312f5b.png"
-  Divu = """[Mr.Divu」](https://telegram.dog/imDivu) as Kite.\n To get more about him do `!info @imDivu`"""
+  Ayanokojiimg = "https://telegra.ph/file/1cf42dcd39ff264f5a2f1.jpg"
+  Ayanokoji = """[Ayanokōji](https://telegram.dog/Ayanokoji_op) As Ayanokōji.\n To Get More About Him Do `/info @Ayanokoji_op`"""
 
 
  
 
-  message.reply_photo(Devimg, Dev, parse_mode=ParseMode.MARKDOWN)
+  message.reply_photo(Ayanokojiimg, Ayanokoji, parse_mode=ParseMode.MARKDOWN)
   message.reply_photo(Divuimg, Divu, parse_mode=ParseMode.MARKDOWN)  
 
 
