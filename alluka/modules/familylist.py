@@ -15,7 +15,7 @@ def ud(bot: Bot, update: Update):
   Divu = """[Mr.Divu」](https://telegram.dog/imDivu) As *Itachi Uchiha*.\n To Get More About Him Do `/info @imDivu`"""
 
   Ayanokojiimg = "https://telegra.ph/file/1cf42dcd39ff264f5a2f1.jpg"
-  Ayanokoji = """[Ayanokōji](https://telegram.dog/Ayanokoji_op) As Ayanokōji.\n To Get More About Him Do `/info @Ayanokoji_op`"""
+  Ayanokoji = """[Ayanokōji](https://telegram.dog/Ayanokoji_op) As Ayanokōji Kiyotaka.\n To Get More About Him Do `/info @Ayanokoji_op`"""
 
 
  
