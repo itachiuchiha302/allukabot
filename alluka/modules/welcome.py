@@ -159,7 +159,7 @@ def new_member(bot: Bot, update: Update):
 
             # Welcome SUNNY
             elif new_mem.id in HISOKA:
-                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop! <b>Hisoka Morow</b> Join Your Family!\n <i>'My Greatest Pleasure Comes When Such People Crumple To Their Knees And I Look Down Upon Their Disbelieving Faces As Their Plans Fail.♥'</i>\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop! <b>Itachi Uchiha </b> Join Your Group!\n <i>'My Greatest Pleasure Comes When Such People Crumple To Their Knees And I Look Down Upon Their Disbelieving Faces As Their Plans Fail.♥'</i>\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 bot.send_sticker(chat.id, HISOKA_WELCOME) 
                 continue
             
@@ -210,7 +210,7 @@ def new_member(bot: Bot, update: Update):
                 continue       
             # Make bot greet admins
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("Hey {}\n I'm {}! Thanks For Adding Me To {}\n" 
+                update.effective_message.reply_text("Hey {}\nI'm {}! Thanks For Adding Me To {}\n" 
                 "Be Sure To Check /help In PM For More Cmds And Tricks!😉\nTo Know About Us - /familylist".format(user.first_name, bot.first_name, chat_name))
 
             else:
