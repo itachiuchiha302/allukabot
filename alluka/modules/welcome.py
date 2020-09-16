@@ -159,7 +159,7 @@ def new_member(bot: Bot, update: Update):
 
             # Welcome SUNNY
             elif new_mem.id in HISOKA:
-                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop! <b>Itachi Uchiha </b> Join Your Group!\n <i>'My Greatest Pleasure Comes When Such People Crumple To Their Knees And I Look Down Upon Their Disbelieving Faces As Their Plans Fail.♥'</i>\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop! <b>Itachi Uchiha </b> Join Your Group!\n <i>'Self-Secrifice...\nA Name-Less *Shinobi* Who Protects Peace Within It Shadow...\nThat Is A True *Shinobi*. - ITACHI UCHIHA'</i>\n\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 bot.send_sticker(chat.id, HISOKA_WELCOME) 
                 continue
             
