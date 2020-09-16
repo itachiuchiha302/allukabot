@@ -159,7 +159,7 @@ def new_member(bot: Bot, update: Update):
 
             # Welcome SUNNY
             elif new_mem.id in HISOKA:
-                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop! <b>Itachi Uchiha </b> Join Your Group!\n <i>'Self-Secrifice...\nA Name-Less *Shinobi* Who Protects Peace Within It Shadow...\nThat Is A True *Shinobi*. - ITACHI UCHIHA'</i>\n\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(HISOKA_IMG,"Blop! Blop!\n <b>Itachi Uchiha </b> Join Your Group!\n\n <i>'Self-Secrifice...\nA Name-Less **Shinobi** Who Protects Peace Within It Shadow...\nThat Is A True **Shinobi**.\n - ITACHI UCHIHA'</i>\n\nTo Know About My Family Do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 bot.send_sticker(chat.id, HISOKA_WELCOME) 
                 continue
             
@@ -296,7 +296,7 @@ def left_member(bot: Bot, update: Update):
                 return
 
             elif left_mem.id in HISOKA:
-                update.effective_message.reply_text("Don't warry I'll comeback SOON!! ")
+                update.effective_message.reply_text("Don't Warry, I'll Comeback Soon!!😉 ")
                 bot.send_sticker(chat.id, HISOKA_BYE)
                 return
 
