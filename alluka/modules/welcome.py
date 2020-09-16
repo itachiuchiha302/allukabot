@@ -42,7 +42,7 @@ ALLUKA_BYE = 'CAACAgUAAxkBAAIH1V5ndElxrCQ7u4DArzlZEG55xEyWAAJJAQAC3pTNL9hDGCPpDe
 HISOKA_WELCOME = 'CAACAgUAAxkBAAIIMV5nn5yc1DYg1O1CoeJHvVAzCqthAAICAQAC3pTNL5i4rHpWUFe2GAQ'
 HISOKA_BYE = "CAACAgUAAxkBAAIISl5no3bh-m5aeydeL3SCh9DxVF4YAAJDAANI39Y3nfMSlYtyINIYBA"
 ALLUKA_IMG = 'https://telegra.ph/file/1ca41b5335290524eee7d.jpg'
-HISOKA_IMG = "https://telegra.ph/file/4aee5cfe2ba8a3fa503d0.jpg"
+HISOKA_IMG = "https://telegra.ph/file/fb5d3caee63a8c36c7d06.jpg"
 GING_IMG = "https://telegra.ph/file/22a1c264865bd07af7556.png"
 SHIZUKU_IMG =  "https://telegra.ph/file/31fcbda7396fb94d7fc62.png"
 SILVA_IMG = "https://telegra.ph/file/37bf67a10d77b9661bec1.png"
@@ -210,8 +210,8 @@ def new_member(bot: Bot, update: Update):
                 continue       
             # Make bot greet admins
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("Hey {}, I'm {}! Thank you for adding me to {}" 
-                " and be sure to check /help in PM for more commands and tricks!".format(user.first_name, bot.first_name, chat_name))
+                update.effective_message.reply_text("Hey {}\n I'm {}! Thanks For Adding Me To {}\n" 
+                "Be Sure To Check /help In PM For More Cmds And Tricks!😉\nTo Know About Us - /familylist".format(user.first_name, bot.first_name, chat_name))
 
             else:
                 # If welcome message is media, send with appropriate function
