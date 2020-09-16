@@ -210,8 +210,8 @@ def new_member(bot: Bot, update: Update):
                 continue       
             # Make bot greet admins
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("Hey {}\nI'm {}! Thanks For Adding Me To {}\n" 
-                "Be Sure To Check /help In PM For More Cmds And Tricks!😉\nTo Know About Us - /familylist".format(user.first_name, bot.first_name, chat_name))
+                update.effective_message.reply_text("Hey, {}\nI'm {}! Thanks For Adding Me To {}\n" 
+                "Be Sure To Check - /help In PM For More Cmd And Tricks!😉\nTo Know About Us - /familylist".format(user.first_name, bot.first_name, chat_name))
 
             else:
                 # If welcome message is media, send with appropriate function
