@@ -1,12 +1,12 @@
 # CONFIG SETUP
 alluka_explain_config: "alluka_zoldyck"
 
-bot_token: "1339785992:AAFJKy5-UmmcYi5-8YJjCHLB6toIhEgHnAM"  
+bot_token: "1204253816:AAGxX2JNqa02RKN6RTpTltaCvTAzvC3YwLc"  
 owner_id: 905126640
-api_key: 1438627
-api_hash: 'a3df45b8d3b710a5b15b485381f1adc8'
-owner_username: ""
-database_url: "postgres://zsyltgjf:gnr9oSdXglJfT-A26-2N7WeNW1uLNHX_@hansken.db.elephantsql.com:5432/zsyltgjf"
+api_key: 1498650
+api_hash: '5627d58c9a6fd9901d85e301592e32d1'
+owner_username: "imDivu"
+database_url: "postgres://vofofgff:4h-wAcfPQl6rxYSs9XWQ37rJh3P3qehb@lallah.db.elephantsql.com:5432/vofofgff"
 message_dump: "chat_id"
 gban_dump: "chat_id"
 load: []
@@ -48,6 +48,6 @@ kite: []
 
 # Permission
 dev_users: []
-sudo_users: [905126640, 943978681]
+sudo_users: [943978681]
 support_users: []
 whitelist_users: []
