@@ -47,10 +47,7 @@ def no_longer_afk(bot: Bot, update: Update):
         try:        
             options = [
 
-            '{} Is Back Online!',
-            '{} Is No Longer afk!',
-            'Yoo! {} Is Back.',
-            'Wellcome Back! {}'
+            '{} Is Back Online!'
 
                     ]
             chosen_option = random.choice(options)
