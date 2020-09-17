@@ -11,16 +11,16 @@ async def purge(event):
     chat = event.chat_id
 
     if not await user_is_admin(user_id=event.from_id, message=event):
-        await event.reply(chat, "Who dis non-admin telling me what to do?")
+        await event.reply(chat, "🤦🏼Who Is This Stupid🐵\nTo Telling Me What To Do?")
         return
 
     if not await can_delete_messages(message=event):
-        await event.reply(chat, "I can't delete messages here! Make sure I'm admin and can delete other user's messages.")
+        await event.reply(chat, "I Can't Delete Messages Here!\nMake Sure I'm Admin And Can Delete Other User's Messages.")
         return
 
     msg = await event.get_reply_message()
     if not msg:
-        await event.reply(chat, "Reply to a message to select where to start purging from.")
+        await event.reply(chat, "Reply To A Message To Select Where To Start Purging From.")
         return
     msgs = []
     msg_id = msg.id
@@ -35,7 +35,7 @@ async def purge(event):
             msgs = []
 
     await event.client.delete_messages(chat, msgs)
-    text = (chat, "Purge completed.")
+    text = (chat, "Purge Completed.")
     await event.respond(text, parse_mode='md')
 
 
@@ -47,16 +47,16 @@ async def delet(event):
     chat = event.chat_id
 
     if not await user_is_admin(user_id=event.from_id, message=event):
-        await event.reply(chat, "Who dis non-admin telling me what to do?")
+        await event.reply(chat, "🤦🏼Who Is This Stupid🐵\nTo Telling Me What To Do?")
         return
 
     if not await can_delete_messages(message=event):
-        await event.reply(chat, "I can't delete messages here! Make sure I'm admin and can delete other user's messages.")
+        await event.reply(chat, "I Can't Delete Messages Here!\nMake Sure I'm Admin And Can Delete Other User's Messages.")
         return
 
     msg = await event.get_reply_message()
     if not msg:
-        await event.reply(chat, "Reply to a message to select where to start purging from.")
+        await event.reply(chat, "Reply To A Message To Select Where To Start Purging From.")
         return
     currentmsg = event.message
     chat = await event.get_input_chat()
@@ -67,8 +67,8 @@ async def delet(event):
 
 __help__ = """
 *Admin only:*
- - /del: deletes the message you replied to
- - /purge: deletes all messages between this and the replied to message.
+ - /del : Deletes The Message You Replied To
+ - /purge : Deletes All Messages Between This And The Replied To Message.
 """
 
 __mod_name__ = "Purges"
