@@ -46,12 +46,10 @@ def no_longer_afk(bot: Bot, update: Update):
         firstname = update.effective_user.first_name
         try:        
             options = [
-          
-            '{} Is Back Online!'
-            '{} Is No Longer afk!'
+            '{} Is Back Online!',
+            '{} Is No Longer afk!',
             'Yoo! {} Is Back.'
-     
-                    ]
+                      ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
         except:
