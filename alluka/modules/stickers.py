@@ -107,7 +107,7 @@ def kang(bot: Bot, update: Update, args: List[str]):
         elif reply.sticker and reply.sticker.emoji:
             sticker_emoji = reply.sticker.emoji
         else:
-            sticker_emoji = "🤔"
+            sticker_emoji = "🙃"
     elif args and not reply:
         urlemoji = msg.text.split(" ")
         if len(urlemoji) == 3:                
@@ -115,7 +115,7 @@ def kang(bot: Bot, update: Update, args: List[str]):
             sticker_emoji = urlemoji[2]
         elif len(urlemoji) == 2:
             png_sticker = urlemoji[1]
-            sticker_emoji = "🤔"
+            sticker_emoji = "🙃"
         else:
             msg.reply_text("/kang <link> <emoji(s) [Optional]>")
             return
@@ -163,7 +163,7 @@ def makepack_internal(msg, user, png_sticker, emoji, bot):
     name = name[:50]
     packname = f"c{user.id}_by_{bot.username}"
     try:
-        success = bot.create_new_sticker_set(user.id, packname, name + "'s @Zoldycktmbot Pack",
+        success = bot.create_new_sticker_set(user.id, packname, name + "'s @MissHinata_Bot Pack",
                                              png_sticker=png_sticker,
                                              emojis=emoji)
     except TelegramError as e:
