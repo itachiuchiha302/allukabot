@@ -11,16 +11,16 @@ async def purge(event):
     chat = event.chat_id
 
     if not await user_is_admin(user_id=event.from_id, message=event):
-        await event.reply(chat, "🤦🏼Who Is This Stupid🐵\nTo Telling Me What To Do?")
+        await event.reply(chat, "Who dis non-admin telling me what to do?")
         return
 
     if not await can_delete_messages(message=event):
-        await event.reply(chat, "I Can't Delete Messages Here!\nMake Sure I'm Admin And Can Delete Other User's Messages.")
+        await event.reply(chat, "I can't delete messages here! Make sure I'm admin and can delete other user's messages.")
         return
 
     msg = await event.get_reply_message()
     if not msg:
-        await event.reply(chat, "Reply To A Message To Select Where To Start Purging From.")
+        await event.reply(chat, "Reply to a message to select where to start purging from.")
         return
     msgs = []
     msg_id = msg.id
@@ -47,16 +47,16 @@ async def delet(event):
     chat = event.chat_id
 
     if not await user_is_admin(user_id=event.from_id, message=event):
-        await event.reply(chat, "🤦🏼Who Is This Stupid🐵\nTo Telling Me What To Do?")
+        await event.reply(chat, "Who dis non-admin telling me what to do?")
         return
 
     if not await can_delete_messages(message=event):
-        await event.reply(chat, "I Can't Delete Messages Here!\nMake Sure I'm Admin And Can Delete Other User's Messages.")
+        await event.reply(chat, "I can't delete messages here! Make sure I'm admin and can delete other user's messages.")
         return
 
     msg = await event.get_reply_message()
     if not msg:
-        await event.reply(chat, "Reply To A Message To Select Where To Start Purging From.")
+        await event.reply(chat, "Reply to a message to select where to start purging from.")
         return
     currentmsg = event.message
     chat = await event.get_input_chat()
