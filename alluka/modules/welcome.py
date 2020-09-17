@@ -165,7 +165,7 @@ def new_member(bot: Bot, update: Update):
             
             # Welcome BHAVIK
             elif new_mem.id in GING:
-                update.effective_message.reply_photo(GING_IMG,"haye!! <b>Ging</b> is just join your family!!\n <i>I'm enjoying the journey. So if your destination is the same as mine, enjoy the side trips. A lot. Something more important than the thing you're hunting could be right there by the side of the road.'</i>\nTo know about my family do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(GING_IMG,"ye!! <b>Ging</b> is just join your family!!\n <i>I'm enjoying the journey. So if your destination is the same as mine, enjoy the side trips. A lot. Something more important than the thing you're hunting could be right there by the side of the road.'</i>\nTo know about my family do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 continue
         
             # Welcome Whitelisted
