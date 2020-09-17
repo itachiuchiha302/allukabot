@@ -5,7 +5,7 @@ bot_token: "1339785992:AAFJKy5-UmmcYi5-8YJjCHLB6toIhEgHnAM"
 owner_id: 1188642691
 api_key: 1438627
 api_hash: 'a3df45b8d3b710a5b15b485381f1adc8'
-owner_username: "Ayanokoji_op"
+owner_username: "Ayanokōji_op"
 database_url: "postgres://zsyltgjf:gnr9oSdXglJfT-A26-2N7WeNW1uLNHX_@hansken.db.elephantsql.com:5432/zsyltgjf"
 message_dump: "chat_id"
 gban_dump: "chat_id"
@@ -21,7 +21,7 @@ del_cmds: False
 strict_gban: False
 strict_gmute: False
 spammers_lists: [100]
-ban_sticker: 'CAACAgQAAxkBAAEGD2ZfX6zRvoCogPWDrCO9RdYa46wy4gACYAEAAix7cAqLRN5ebbj1DxsE'
+ban_sticker: 'CAACAgUAAxkBAAEGFsZfYw2yKu36GeDqHm4bnPQU_lhi9gACOgAD8CLzNdyuxbDUE74oGwQ'
 
 
 # API SETUP
