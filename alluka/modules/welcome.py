@@ -153,7 +153,7 @@ def new_member(bot: Bot, update: Update):
         for new_mem in new_members:
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text(OWNER_IMG,"My Master Has Just Join Your Group.",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+                update.effective_message.reply_photo(OWNER_IMG,"My Master Has Just Join Your Group.",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 bot.send_sticker(chat.id, OWNER_WELCOME)
                 continue
 
