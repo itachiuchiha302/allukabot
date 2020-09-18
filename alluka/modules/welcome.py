@@ -38,6 +38,9 @@ ENUM_FUNC_MAP = {
 }
 
 
+OWNER_IMG = "https://telegra.ph/file/1cf42dcd39ff264f5a2f1.jpg"
+OWNER_BYE = 'CAACAgUAAxkBAAEGE4VfYdlnIkxA-O3Bw2XR8twnnfKh6gACOAAD8CLzNYVhGIQCxvoSGwQ'
+OWNER_WELCOME = 'CAACAgUAAxkBAAIH1V5ndElxrCQ7u4DArzlZEG55xEyWAAJJAQAC3pTNL9hDGCPpDeX8GAQ'
 ALLUKA_BYE = 'CAACAgUAAxkBAAIH1V5ndElxrCQ7u4DArzlZEG55xEyWAAJJAQAC3pTNL9hDGCPpDeX8GAQ'
 HISOKA_WELCOME = 'CAACAgUAAxkBAAEGEzBfYb-K2MyO2YB29KpOOxhi_lsucgACNwAD8CLzNQtR9-p5YbwFGwQ'
 HISOKA_BYE = "CAACAgUAAxkBAAEGE4VfYdlnIkxA-O3Bw2XR8twnnfKh6gACOAAD8CLzNYVhGIQCxvoSGwQ"
@@ -150,8 +153,10 @@ def new_member(bot: Bot, update: Update):
         for new_mem in new_members:
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text("My Master Has Just Join Your Group.")
+                update.effective_message.reply_text(OWNER_IMG,"My Master Has Just Join Your Group.")
+                bot.send_sticker(chat.id, OWNER_WELCOME)
                 continue
+
             elif new_mem.id in ALLUKA:
                 update.effective_message.reply_photo(ALLUKA_IMG,"Woah! I just join this family!\n <i>If you're nice to me, you have to be nice to Nanika too!! If you're going to protect me, you have to protect Nanika too!! But if you're going to be mean to Nanika, I hate you!!</i>\n To know about my family do /familylist ",parse_mode=ParseMode.HTML, disable_web_page_preview=True)
                 bot.send_sticker(chat.id, BAN_STICKER) 
