@@ -5,7 +5,11 @@ from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, BigInteger
 from alluka.modules.helper_funcs.msg_types import Types
 from alluka.modules.sql import SESSION, BASE
 
-DEFAULT_WELCOME = "Hey {first}, how are you?"
+DEFAULT_WELCOME = [
+    "Hey {first}, how are you?",
+    "{first} is here!",
+    "welcome {first}"
+                ]
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
