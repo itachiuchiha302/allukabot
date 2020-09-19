@@ -9,6 +9,7 @@ DEFAULT_WELCOME = "Hey {first}, how are you?"
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
 DEFAULT_WELCOME_MESSAGES = [
+    
     "{first} is here!",
     "{first} av pyare av",
     "Welcome {first}",
@@ -16,6 +17,7 @@ DEFAULT_WELCOME_MESSAGES = [
 ]
 
 DEFAULT_GOODBYE_MESSAGES = [
+    
     "{first} will be missed.",
     "{first} just went offline.",
     "{first} has left the lobby.",
