@@ -8,6 +8,20 @@ from alluka.modules.sql import SESSION, BASE
 DEFAULT_WELCOME = "Hey {first}, how are you?"
 DEFAULT_GOODBYE = "Nice knowing ya!"
 
+DEFAULT_WELCOME_MESSAGES = [
+    "{first} is here!",
+    "{first} av pyare av",
+    "Welcome {first}",
+
+]
+
+DEFAULT_GOODBYE_MESSAGES = [
+    "{first} will be missed.",
+    "{first} just went offline.",
+    "{first} has left the lobby.",
+
+]
+
 class Welcome(BASE):
     __tablename__ = "welcome_pref2"
     chat_id = Column(String(14), primary_key=True)
