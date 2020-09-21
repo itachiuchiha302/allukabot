@@ -37,7 +37,7 @@ def no_longer_afk(bot: Bot, update: Update):
     chat = update.effective_chat  # type: Optional[Chat]
     message = update.effective_message  # type: Optional[Message]
 
-        if not user:  # ignore channels
+    if not user:  # ignore channels
         return
 
     res = sql.rm_afk(user.id)
