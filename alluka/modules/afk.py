@@ -37,7 +37,7 @@ def no_longer_afk(bot: Bot, update: Update):
     chat = update.effective_chat  # type: Optional[Chat]
     message = update.effective_message  # type: Optional[Message]
 
-    if user_id == OWNER_ID
+    if user == OWNER_ID
         update.effective_message.reply_text("Welcome Back Master!")
         return
       
