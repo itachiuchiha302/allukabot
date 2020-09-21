@@ -1,4 +1,5 @@
 import html, time
+import random
 import re
 from typing import Optional, List
 
@@ -227,12 +228,15 @@ def new_member(bot: Bot, update: Update):
                 first_name = new_mem.first_name or "PersonWithNoName"  # edge case of empty name - occurs for some bugs.
 
                 if cust_welcome:
+                    if cust_welcome == sql.DEFAULT_WELCOME:
+                        cust_welcome = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=escape_markdown(first_name))
+
                     if new_mem.last_name:
-                        fullname = "{} {}".format(first_name, new_mem.last_name)
+                        fullname = escape_markdown(f"{first_name} {new_mem.last_name}")
                     else:
-                        fullname = first_name
+                        fullname = escape_markdown(first_name)
                     count = chat.get_members_count()
-                    mention = mention_markdown(new_mem.id, first_name)
+                    mention = mention_markdown(new_mem.id, escape_markdown(first_name))
                     if new_mem.username:
                         username = "@" + escape_markdown(new_mem.username)
                     else:
@@ -245,14 +249,13 @@ def new_member(bot: Bot, update: Update):
                                               count=count, chatname=escape_markdown(chat.title), id=new_mem.id)
                     buttons = sql.get_welc_buttons(chat.id)
                     keyb = build_keyboard(buttons)
+
                 else:
-                    res = random.choice(sql.DEFAULT_WELCOME.format(first=first_name))
+                    res = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=escape_markdown(first_name))
                     keyb = []
 
-                keyboard = InlineKeyboardMarkup(keyb)
-
-                sent = send(update, res, keyboard,
-                            random.choice(sql.DEFAULT_WELCOME.format(first=first_name)))  # type: Optional[Message]
+                backup_message = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=escape_markdown(first_name))
+                keyboard = InlineKeyboardMarkup(keyb)  # type: Optional[Message]
             
                 
                 #Sudo user exception from mutes:
