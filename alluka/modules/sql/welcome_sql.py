@@ -26,10 +26,10 @@ class Welcome(BASE):
     should_welcome = Column(Boolean, default=True)
     should_goodbye = Column(Boolean, default=True)
 
-    custom_welcome = Column(UnicodeText, default=DEFAULT_WELCOME)
+    custom_welcome = Column(UnicodeText, default=random.choice(DEFAULT_WELCOME_MESSAGE)
     welcome_type = Column(Integer, default=Types.TEXT.value)
 
-    custom_leave = Column(UnicodeText, default=DEFAULT_GOODBYE)
+    custom_leave = Column(UnicodeText, default=random.choice(DEFAULT_GOODBYE_MESSAGE)
     leave_type = Column(Integer, default=Types.TEXT.value)
 
     clean_welcome = Column(BigInteger)
