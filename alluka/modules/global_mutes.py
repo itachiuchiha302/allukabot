@@ -284,20 +284,6 @@ def __stats__():
     return "{} gmuted users.".format(sql.num_gmuted_users())
 
 
-def __user_info__(user_id):
-    is_gmuted = sql.is_user_gmuted(user_id)
-
-    text = "Globally muted: <b>{}</b>"
-    if is_gmuted:
-        text = text.format("Yes")
-        user = sql.get_gmuted_user(user_id)
-        if user.reason:
-            text += "\nReason: {}".format(html.escape(user.reason))
-    else:
-        text = text.format("No")
-    return text
-
-
 def __migrate__(old_chat_id, new_chat_id):
     sql.migrate_chat(old_chat_id, new_chat_id)
 
