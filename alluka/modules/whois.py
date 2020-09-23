@@ -43,21 +43,21 @@ def info(bot: Bot, update: Update, args: List[str]):
     else:
         return
 
-    text = (f"<b>Characteristics:</b>\n"
-            f"ID: <code>{user.id}</code>\n"
-            f"First Name: {html.escape(user.first_name)}")
+    text = (f"<b>Characteristics :-</b>\n\n"
+            f"ID :- <code>{user.id}</code>\n"
+            f"First Name :- {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\nLast Name: {html.escape(user.last_name)}"
+        text += f"\nLast Name :- {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\nUsername: @{html.escape(user.username)}"
+        text += f"\nUsername :- @{html.escape(user.username)}"
 
-    text += f"\nPermanent User Link: {mention_html(user.id, '🤡 Here 🤡')}"
+    text += f"\nUser Link :- {mention_html(user.id, ' Here 🙃')}"
 
     
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\nChat count: <code>{num_chats}</code>"
+    text += f"\nMutual Chats :- <code>{num_chats}</code>"
 
     try:
         user_member = chat.get_member(user.id)
@@ -66,14 +66,14 @@ def info(bot: Bot, update: Update, args: List[str]):
             result = result.json()["result"]
             if "custom_title" in result.keys():
                 custom_title = result['custom_title']
-                text += f"\nThis user holds the title <b>{custom_title}</b> here."
+                text += f"\nAdmim Title :- <b>{custom_title}</b> "
     except BadRequest:
         pass
 
    
 
     if user.id == OWNER_ID:
-        text += "\nThis person is my owner - I would never do anything against them!."
+        text += "\nThis Person is my owner - I would never do anything against them!."
         
     elif user.id in DEV_USERS:
         text += "\nThis person is my dev - I would never do anything against them!."
