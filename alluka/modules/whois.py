@@ -52,9 +52,9 @@ def info(bot: Bot, update: Update, args: List[str]):
         text += f"\nLast Name :- {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\nUsername :- @{html.escape(user.username)}"
+        text += f"\nUsername  :- @{html.escape(user.username)}"
 
-    text += f"\nUser Link :- {mention_html(user.id, ' Here 🙃')}"
+    text += f"\nUser Link   :- {mention_html(user.id, ' Here 🙃')}"
 
     
     num_chats = sql.get_user_num_chats(user.id)
