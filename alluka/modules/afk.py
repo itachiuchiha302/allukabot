@@ -2,10 +2,10 @@ import random
 import html
 import time
 
-from Megumi import dispatcher
-from Megumi.modules.disable import (DisableAbleCommandHandler)
-from Megumi.modules.sql import afk_sql as sql
-from Megumi.modules.users import get_user_id
+from alluka import dispatcher
+from alluka.modules.disable import (DisableAbleCommandHandler)
+from alluka.modules.sql import afk_sql as sql
+from alluka.modules.users import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
