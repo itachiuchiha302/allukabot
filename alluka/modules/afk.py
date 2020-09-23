@@ -150,7 +150,7 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
 
             
 def __user_info__(user_id):
-    text = "Currently AFK : <b>{}</b>"
+    text = "\n\nCurrently AFK : <b>{}</b>"
     if sql.is_afk(user_id):
         text = text.format("Yes")
         user = sql.check_afk_status(user_id)
