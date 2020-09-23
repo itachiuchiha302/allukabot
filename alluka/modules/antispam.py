@@ -469,18 +469,7 @@ def __stats__():
     return "{} gbanned users.".format(sql.num_gbanned_users())
 
 
-def __user_info__(user_id):
-    is_gbanned = sql.is_user_gbanned(user_id)
 
-    text = "Globally Banned: <b>{}</b>"
-    if is_gbanned:
-        text = text.format("Yes")
-        user = sql.get_gbanned_user(user_id)
-        if user.reason:
-            text += "\nReason: <code>{}</code>".format(html.escape(user.reason))
-    else:
-        text = text.format("No")
-    return text
 
 
 def __migrate__(old_chat_id, new_chat_id):
