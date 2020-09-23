@@ -140,14 +140,25 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
         if not user.reason:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk \n\nLast Seen: {} ago".format(fst_name, afk_time)
+            res = "{} IS AFK! \n\nLast Seen: {} ago".format(fst_name, afk_time)
             update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk.\nLast Seen: {} ago \n\nReason: {}".format(fst_name, afk_time, user.reason)
+            res = "{} IS AFK! \nLast Seen: {} ago \n\nReason: {}".format(fst_name, afk_time, user.reason)
             update.effective_message.reply_text(res)
 
+            
+def __user_info__(user_id):
+    text = "Currently AFK : <b>{}</b>"
+    if sql.is_afk(user_id):
+        text = text.format("Yes")
+        user = sql.check_afk_status(user_id)
+        if user.reason:
+              text += "\nRsn : <code>{}</code>".format(html.escape(user.reason))
+    else:
+         text = text.format("No")
+    return text
 
 
 
