@@ -33,6 +33,8 @@ def time_formatter(seconds: float) -> str:
 
 @run_async
 def afk(bot: Bot, update: Update):
+    global TIME
+    TIME = time.time()
     chat = update.effective_chat  # type: Optional[Chat]
     args = update.effective_message.text.split(None, 1)
     if len(args) >= 2:
@@ -132,7 +134,7 @@ def reply_afk(bot: Bot, update: Update):
 
 
 def check_afk(bot, update, user_id, fst_name, userc_id):
-    afk_time = time_formatter(round(time.TIME()))
+    afk_time = time_formatter(round(time.time() - TIME))
     if sql.is_afk(user_id):
         user = sql.check_afk_status(user_id)
         if not user.reason:
