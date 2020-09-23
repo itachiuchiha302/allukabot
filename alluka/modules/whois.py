@@ -21,7 +21,6 @@ from alluka.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHa
 from alluka.modules.helper_funcs.extraction import extract_user
 from alluka.modules.helper_funcs.filters import CustomFilters
 import alluka.modules.sql.users_sql as sql
-from alluka.modules.sql import afk_sql as sql
 
 @run_async
 def info(bot: Bot, update: Update, args: List[str]):
