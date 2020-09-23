@@ -132,18 +132,18 @@ def reply_afk(bot: Bot, update: Update):
 
 
 def check_afk(bot, update, user_id, fst_name, userc_id):
-    afk_time = time_formatter(round(TIME))
+    afk_time = time_formatter(round(time.time() - TIME))
     if sql.is_afk(user_id):
         user = sql.check_afk_status(user_id)
         if not user.reason:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk \nLast Seen: {} ago".format(fst_name, afk_time)
+            res = "{} is afk \n\nLast Seen: {} ago".format(fst_name, afk_time)
             update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk.\nLast Seen: {} ago \nReason: {}".format(fst_name, afk_time, user.reason)
+            res = "{} is afk.\nLast Seen: {} ago \n\nReason: {}".format(fst_name, afk_time, user.reason)
             update.effective_message.reply_text(res)
 
 def __user_info__(user_id):
