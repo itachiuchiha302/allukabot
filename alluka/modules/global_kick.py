@@ -92,19 +92,6 @@ def gkick(bot: Bot, update: Update, args: List[str]):
         except TelegramError:
             pass
 
-def __user_info__(user_id):
-    times = sql.get_times(user_id)
-    
-    if int(user_id) in SUDO_USERS or int(user_id) in SUPPORT_USERS:
-        text="Globally kicked: <b>No</b> (Immortal)"
-    else:
-        text = "Globally kicked: {}"
-        if times!=0:
-            text = text.format("<b>Yes</b> (Times: {})".format(times))
-        else:
-            text = text.format("<b>No</b>")
-    return text
-
 @run_async
 def gkickset(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
