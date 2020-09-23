@@ -132,7 +132,7 @@ def reply_afk(bot: Bot, update: Update):
 
 
 def check_afk(bot, update, user_id, fst_name, userc_id):
-    afk_time = time_formatter(round(time.time))
+    afk_time = time_formatter(round(time.time())
     if sql.is_afk(user_id):
         user = sql.check_afk_status(user_id)
         if not user.reason:
