@@ -53,11 +53,11 @@ def info(bot: Bot, update: Update, args: List[str]):
     if user.username:
         text += f"\nUsername :- @{html.escape(user.username)}"
 
-    text += f"\nUser Link :- {mention_html(user.id, ' Here 🙃')}"
+    text += f"\nUser Link :- {mention_html(user.id, ' Here 🙃')}  "\n
 
     
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\nMutual Chats :- <code>{num_chats}</code>"
+    text += f"\nMutual Chats :- <code>{num_chats}</code> \n"
 
     try:
         user_member = chat.get_member(user.id)
@@ -66,7 +66,7 @@ def info(bot: Bot, update: Update, args: List[str]):
             result = result.json()["result"]
             if "custom_title" in result.keys():
                 custom_title = result['custom_title']
-                text += f"\nAdmim Title :- <b>{custom_title}</b> "
+                text += f"\nAdmim Title :- <b>{custom_title}</b> \n"
     except BadRequest:
         pass
 
