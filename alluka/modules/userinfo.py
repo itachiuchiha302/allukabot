@@ -50,9 +50,9 @@ def set_about_me(bot: Bot, update: Update):
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
             if user_id == bot.id:
-                message.reply_text("Updated my info!")
+                message.reply_text("Updated My Info!")
             else:
-                message.reply_text("Updated your info!")
+                message.reply_text("Updated Your Info!")
         else:
             message.reply_text(
                 "The info needs to be under {} characters! You have {}.".format(MAX_MESSAGE_LENGTH // 4, len(info[1])))
@@ -116,11 +116,11 @@ def __user_info__(user_id):
     bio = html.escape(sql.get_user_bio(user_id) or "")
     me = html.escape(sql.get_user_me_info(user_id) or "")
     if bio and me:
-        return f"<b>About user:</b>\n{me}\n<b>What others say:</b>\n{bio}"
+        return f"<b>About User :</b>\n{me}\n<b>What Others Say :</b>\n{bio}"
     elif bio:
-        return f"<b>What others say:</b>\n{bio}\n"
+        return f"<b>What Others Say :</b>\n{bio}\n"
     elif me:
-        return f"<b>About user:</b>\n{me}"
+        return f"<b>About User :</b>\n{me}"
     else:
         return ""
 
