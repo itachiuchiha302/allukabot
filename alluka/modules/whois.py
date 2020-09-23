@@ -53,7 +53,7 @@ def info(bot: Bot, update: Update, args: List[str]):
     if user.username:
         text += f"\nUsername: @{html.escape(user.username)}"
 
-    text += f"\nPermanent user link: {mention_html(user.id, 'link')}"
+    text += f"\nPermanent User Link: {mention_html(user.id, '🤡 Here 🤡')}"
 
     
     num_chats = sql.get_user_num_chats(user.id)
@@ -94,10 +94,7 @@ def info(bot: Bot, update: Update, args: List[str]):
        
 
     
-    text +="\n"
-    text += "\nCAS banned: "
-    result = cas.banchecker(user.id)
-    text += str(result)
+    
     for mod in USER_INFO:
         if mod.__mod_name__ == "Users":
             continue
