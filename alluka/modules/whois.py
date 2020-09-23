@@ -71,17 +71,7 @@ def info(bot: Bot, update: Update, args: List[str]):
     except BadRequest:
         pass
 
-   def __user_info__(user_id):
-    text = "Currently AFK: <b>{}</b>"
-    if sql.is_afk(user_id):
-        text = text.format("Yes")
-        user = sql.check_afk_status(user_id)
-        if user.reason:
-              text += "\nReason: <code>{}</code>".format(html.escape(user.reason))
-    else:
-         text = text.format("No")
-    return text
-
+   
     if user.id == OWNER_ID:
         text += "\nThis Person is my owner - I would never do anything against them!."
         
