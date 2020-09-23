@@ -53,11 +53,11 @@ def info(bot: Bot, update: Update, args: List[str]):
     if user.username:
         text += f"\nUsername :- @{html.escape(user.username)}"
 
-    text += f"\nUser Link :- {mention_html(user.id, ' Here 🙃')}  "\n
+    text += f"\nUser Link :- {mention_html(user.id, ' Here 🙃')}"
 
     
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\nMutual Chats :- <code>{num_chats}</code> \n"
+    text += f"\n\nMutual Chats :- <code>{num_chats}</code> \n"
 
     try:
         user_member = chat.get_member(user.id)
