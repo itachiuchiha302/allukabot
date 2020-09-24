@@ -54,6 +54,9 @@ def info(bot: Bot, update: Update, args: List[str]):
         text += f"\nUsername  :- @{html.escape(user.username)}"
 
     text += f"\nUser Link    :- {mention_html(user.id, ' Here 🤡')}"
+    
+    if user.about:
+        text += f"\nBio :- {html.escape(user.about)}"
 
     
     num_chats = sql.get_user_num_chats(user.id)
