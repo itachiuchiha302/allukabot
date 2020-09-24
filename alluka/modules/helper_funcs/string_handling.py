@@ -242,14 +242,12 @@ def extract_time(message, time_val):
         if not time_num.isdigit():
             message.reply_text("Invalid time amount specified.")
             return ""
-          if unit == 's':
-            bantime = int(time.time() + int(time_num) *1000
-        elif unit == 'm':
-            bantime = int(time.time() + int(time_num) *60 * 1000)
+        if unit == 'm':
+            bantime = int(time.time() + int(time_num) *60)
         elif unit == 'h':
-            bantime = int(time.time() + int(time_num) * 60 * 60 * 1000)
+            bantime = int(time.time() + int(time_num) * 60 * 60)
         elif unit == 'd':
-            bantime = int(time.time() + int(time_num) * 24 * 60 * 60 * 1000)
+            bantime = int(time.time() + int(time_num) * 24 * 60 * 60)
         else:
             # how even...?
             return ""
