@@ -89,7 +89,10 @@ def hinfo(bot: Bot, update: Update, args: List[str]):
         text += "\nWHITELIST USER :  <b> YES </b>"
        
 
-    
+    text +="\n"
+    text += "\nCAS Banned : "
+    result = cas.banchecker(user.id)
+    text += str(result)
     
 
 
