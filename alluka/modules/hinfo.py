@@ -75,21 +75,18 @@ def hinfo(bot: Bot, update: Update, args: List[str]):
         text += "\nThis Person is my owner - I would never do anything against them!."
         
     elif user.id in DEV_USERS:
-        text += "\nThis person is my dev - I would never do anything against them!."
+        text += "\nDEV USER :  <b> YES </b> "
         
     elif user.id in SUDO_USERS:
-        text += "\nThis person is one of my sudo users! " \
-                    "Nearly as powerful as my owner - so watch it.."
+        text += "\nSUDO USER :  <b> YES </b> " 
         
     elif user.id in SUPPORT_USERS:
-        text += "\nThis person is one of my support users! " \
-                        "Not quite a sudo user, but can still gban you off the map."
+        text += "\nSUPPORT USER :  <b> YES </b>"
         
   
        
     elif user.id in WHITELIST_USERS:
-        text += "\nThis person has been whitelisted! " \
-                        "That means I'm not allowed to ban/kick them."
+        text += "\nWHITELIST USER :  <b> YES </b>"
        
 
     
