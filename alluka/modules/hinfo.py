@@ -21,6 +21,7 @@ from alluka.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHa
 from alluka.modules.helper_funcs.extraction import extract_user
 from alluka.modules.helper_funcs.filters import CustomFilters
 import alluka.modules.sql.users_sql as sql
+import alluka.modules.sql.antispam_sql as sql
 
 @run_async
 def hinfo(bot: Bot, update: Update, args: List[str]):
@@ -95,6 +96,19 @@ def hinfo(bot: Bot, update: Update, args: List[str]):
     text += str(result)
     
 
+    
+    text +="\n"
+    is_gbanned = sql.is_user_gbanned(user_id)
+
+    text += "Globally Banned :  <b>{}</b>"
+    if is_gbanned:
+        text += text.format("Yes")
+        user = sql.get_gbanned_user(user_id)
+        if user.reason:
+            text += "\nReason: <code>{}</code>".format(html.escape(user.reason))
+    else:
+        text += text.format("No")
+    return text
 
     update.effective_message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
