@@ -95,16 +95,6 @@ def hinfo(bot: Bot, update: Update, args: List[str]):
     text += str(result)
     
 
-    for mod in USER_INFO:
-        if mod.__mod_name__ == "Users":
-            continue
-
-        try:
-            mod_info = mod.__user_hinfo__(user.id)
-        except TypeError:
-            mod_info = mod.__user_hinfo__(user.id, chat.id)
-        if mod_info:
-            text += "\n" + mod_info
 
     update.effective_message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
