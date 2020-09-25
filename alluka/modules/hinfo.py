@@ -90,27 +90,13 @@ def hinfo(bot: Bot, update: Update, args: List[str]):
         text += "\nWHITELIST USER :  <b> YES </b>"
        
 
-    text +="\n"
-    text += "\nCAS Banned : "
-    result = cas.banchecker(user.id)
-    text += str(result)
+    
     
 
     
-    text +="\n"
-    is_gbanned = sql.is_user_gbanned(user_id)
 
-    text += "Globally Banned :  <b>{}</b>"
-    if is_gbanned:
-        text += text.format("Yes")
-        user = sql.get_gbanned_user(user_id)
-        if user.reason:
-            text += "\nReason: <code>{}</code>".format(html.escape(user.reason))
-    else:
-        text += text.format("No")
-    return text
 
     update.effective_message.reply_text(text, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
-HINFO_HANDLER = DisableAbleCommandHandler("hinfo", hinfo, pass_args=True)
-dispatcher.add_handler(HINFO_HANDLER)
+INFO_HANDLER = DisableAbleCommandHandler("info", info, pass_args=True)
+dispatcher.add_handler(INFO_HANDLER)
