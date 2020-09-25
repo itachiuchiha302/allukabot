@@ -20,11 +20,10 @@ from alluka.__main__ import STATS, USER_INFO, TOKEN
 from alluka.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler
 from alluka.modules.helper_funcs.extraction import extract_user
 from alluka.modules.helper_funcs.filters import CustomFilters
-import alluka.modules.sql.users_sql as sql
-import alluka.modules.sql.antispam_sql as get_gbanned_user 
+import alluka.modules.sql.users_sql as sql 
 
 @run_async
-def hinfo(bot: Bot, update: Update, args: List[str]):
+def info(bot: Bot, update: Update, args: List[str]):
     message = update.effective_message
     chat = update.effective_chat
     user_id = extract_user(update.effective_message, args)
