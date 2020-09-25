@@ -16,7 +16,7 @@ from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
 from alluka.modules.helper_funcs.chat_status import user_admin, sudo_plus, is_user_admin
 from alluka import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, DEV_USERS, WHITELIST_USERS, BAN_STICKER
-from alluka.__main__ import STATS, USER_INFO, TOKEN
+from alluka.__main__ import STATS, USER_HINFO, TOKEN
 from alluka.modules.disable import DisableAbleCommandHandler, DisableAbleRegexHandler
 from alluka.modules.helper_funcs.extraction import extract_user
 from alluka.modules.helper_funcs.filters import CustomFilters
@@ -95,14 +95,14 @@ def hinfo(bot: Bot, update: Update, args: List[str]):
 
     
     
-    for mod in USER_INFO:
+    for mod in USER_HINFO:
         if mod.__mod_name__ == "Users":
             continue
 
         try:
-            mod_info = mod.__user_info__(user.id)
+            mod_info = mod.__user_hinfo__(user.id)
         except TypeError:
-            mod_info = mod.__user_info__(user.id, chat.id)
+            mod_info = mod.__user_hinfo__(user.id, chat.id)
         if mod_info:
             text += "\n" + mod_info
 
