@@ -259,7 +259,7 @@ def shellExecute(bot: Bot, update: Update):
         else:
             sendMessage(f"<code>{output[0].decode()}</code>", bot, update)
 
-	
+#sanitize
 @run_async
 def sanitize(bot: Bot, update: Update):
     message = update.effective_message
@@ -1406,6 +1406,8 @@ REACT_HANDLER = DisableAbleCommandHandler("react", react)
 dispatcher.add_handler(REACT_HANDLER)
 
 #memes
+
+SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, pass_args=True)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
@@ -1416,6 +1418,7 @@ RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 
+dispatcher.add_handler(SANITIZE_HANDLER)
 dispatcher.add_handler(RUNS_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
 dispatcher.add_handler(ROLL_HANDLER)
@@ -1479,7 +1482,7 @@ dispatcher.add_handler(GETFW_HANDLER)
 dispatcher.add_handler(CHECKFW_HANDLER)
 
 # reverse image 
-REVERSE_HANDLER = DisableAbleCommandHandler("reverse", reverse, pass_args=True, admin_ok=True)
+REVERSE_HANDLER = DisableAbleCommandHandler(("reverse", "grs") reverse, pass_args=True, admin_ok=True)
 dispatcher.add_handler(REVERSE_HANDLER)
 
 # anime
@@ -1514,7 +1517,7 @@ MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help, filters=Filters.
 dispatcher.add_handler(MD_HELP_HANDLER)
 
 __command_list__ = ["runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide", "table" ,"react" ,"cash","mathhelp","time"]
-__handlers__ = [RUNS_HANDLER, SLAP_HANDLER, ROLL_HANDLER, TOSS_HANDLER, SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER, REACT_HANDLER,CONVERTER_HANDLER,MATH_HELP_HANDLER,TIME_HANDLER]
+__handlers__ = [RUNS_HANDLER, SLAP_HANDLER, ROLL_HANDLER, TOSS_HANDLER, SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER, REACT_HANDLER,CONVERTER_HANDLER,MATH_HELP_HANDLER,TIME_HANDLER,SANITIZE_HANDLER]
 
 
 MASTER_MOD = " \
