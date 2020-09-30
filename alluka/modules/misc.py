@@ -1482,7 +1482,7 @@ dispatcher.add_handler(GETFW_HANDLER)
 dispatcher.add_handler(CHECKFW_HANDLER)
 
 # reverse image 
-REVERSE_HANDLER = DisableAbleCommandHandler(("reverse", "grs") reverse, pass_args=True, admin_ok=True)
+REVERSE_HANDLER = DisableAbleCommandHandler(("reverse", "grs"), reverse, pass_args=True, admin_ok=True)
 dispatcher.add_handler(REVERSE_HANDLER)
 
 # anime
