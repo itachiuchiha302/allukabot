@@ -169,6 +169,12 @@ SLAP_TEMPLATES = (
     "{user1} hits {user2} with {item}.",
 )
 
+GIFS = [
+    'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE',
+    'CgACAgUAAx0CU_rCTAABAjdgX1s4NVaeCls6YaH3p43vgdCRwQIAAqsAA4P_MFUYQhyoR-kgpRsE',
+    'CgACAgUAAx0CU_rCTAABAjdSX1s3fq5iEJ64YeQLKI8cD7CSuSEAAlUBAAJu09hW5iqWB0hTPD4bBA'
+]
+
 PING_STRING = (
     "PONG!!",
     "I am here!",
