@@ -58,6 +58,7 @@ from typing import Optional, List
 from hurry.filesize import size as sizee
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.utils.helpers import escape_markdown, mention_html
+from alluka.modules.helper_funcs.memes_strings import SANI_GIF
 
 GIF_ID = 'CgACAgQAAx0CU89tcgACBTRfgBsEMC5qvxGbXlswnBl60IXJ4wACVAIAAvrrnVIh1KJstUdkfBsE'
 
