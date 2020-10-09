@@ -170,7 +170,7 @@ SLAP_TEMPLATES = (
 )
 
 GIFS = [
-    'https://telegra.ph/file/79883010cd584bfdb8690.mp4'
+    'CgACAgQAAx0CU89tcgACBTRfgBsEiBS4zFzAQKn4w9nIVhd8swACVAIAAvrrnVJU0SHIYF5dORsE'
 ]
 
 PING_STRING = (
