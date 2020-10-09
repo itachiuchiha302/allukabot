@@ -276,7 +276,7 @@ def sanitize(bot: Bot, update: Update):
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
     reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
     reply_animation(
-        random.choice(SANI_GIFS), caption=f'🧴 *Sanitizes {name}* 🦠')
+        random.choice(SANI_GIF), caption=f'🧴 *Sanitizes {name}* 🦠')
 	
 	
 #ud
