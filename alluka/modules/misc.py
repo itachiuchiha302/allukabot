@@ -264,8 +264,8 @@ def shellExecute(bot: Bot, update: Update):
 def sanitize(bot: Bot, update: Update):
     message = update.effective_message
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
-    reply_video = message.reply_to_message.reply_video if message.reply_to_message else message.reply_video
-    reply_video(GIF_ID, caption=f'🧴 *Sanitizes* 🦠')
+    reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
+    reply_animation(GIF_ID, caption=f'🧴 *Sanitizes {name}* 🦠')
 	
 
 	
@@ -273,9 +273,9 @@ def sanitize(bot: Bot, update: Update):
 def sanitize(bot: Bot, update: Update):
     message = update.effective_message
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
-    reply_video = message.reply_to_message.reply_video if message.reply_to_message else message.reply_video
-    reply_video(
-        random.choice(memes_strings.GIFS), caption=f'🧴 *Sanitizes* 🦠')
+    reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
+    reply_animation(
+        random.choice(memes_strings.GIFS), caption=f'🧴 *Sanitizes {name}* 🦠')
 	
 	
 #ud
