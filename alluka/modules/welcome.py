@@ -24,6 +24,7 @@ from alluka.modules.disable import DisableAbleCommandHandler
 from alluka.modules.helper_funcs.filters import CustomFilters
 from alluka.modules.helper_funcs.string_handling import markdown_parser, escape_invalid_curly_brackets
 from alluka.modules.log_channel import loggable
+import alluka.modules.wel_strings as wel_strings
 
 VALID_WELCOME_FORMATTERS = ['first', 'last', 'fullname', 'username', 'id', 'count', 'chatname', 'mention']
 
@@ -247,13 +248,13 @@ def new_member(bot: Bot, update: Update):
                     buttons = sql.get_welc_buttons(chat.id)
                     keyb = build_keyboard(buttons)
                 else:
-                    res = random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=first_name)
+                    res = random.choice(wel_strings.DEFAULT_WELCOME_MESSAGES).format(first=first_name)
                     keyb = []
 
                 keyboard = InlineKeyboardMarkup(keyb)
 
                 sent = send(update, res, keyboard,
-                            random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=first_name))  # type: Optional[Message]
+                            random.choice(wel_strings.DEFAULT_WELCOME_MESSAGES).format(first=first_name))  # type: Optional[Message]
             
                 
                 #Sudo user exception from mutes:
