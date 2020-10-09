@@ -6,7 +6,7 @@ from alluka.modules.helper_funcs.msg_types import Types
 from alluka.modules.sql import SESSION, BASE
 
 DEFAULT_WELCOME = ["Welcome {first}", "Yoo! {first}", "{first Is Just Appeared!"]
-DEFAULT_GOODBYE = "👋Nice Knowing Ya!"!"
+DEFAULT_GOODBYE = "👋Nice Knowing Ya!"
 
 class Welcome(BASE):
     __tablename__ = "welcome_pref2"
