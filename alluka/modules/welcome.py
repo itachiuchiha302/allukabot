@@ -253,7 +253,7 @@ def new_member(bot: Bot, update: Update):
                 keyboard = InlineKeyboardMarkup(keyb)
 
                 sent = send(update, res, keyboard,
-                            sql.DEFAULT_WELCOME_MESSAGES.format(first=first_name))  # type: Optional[Message]
+                            random.choice(sql.DEFAULT_WELCOME_MESSAGES).format(first=first_name))  # type: Optional[Message]
             
                 
                 #Sudo user exception from mutes:
