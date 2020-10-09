@@ -58,6 +58,7 @@ from typing import Optional, List
 from hurry.filesize import size as sizee
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.utils.helpers import escape_markdown, mention_html
+from alluka.modules.helper_funcs.sani_string import SANI_GIF
 
 GIF_ID = 'CgACAgQAAx0CU89tcgACBTRfgBsEMC5qvxGbXlswnBl60IXJ4wACVAIAAvrrnVIh1KJstUdkfBsE'
 
@@ -275,7 +276,7 @@ def sanitize(bot: Bot, update: Update):
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
     reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
     reply_animation(
-        random.choice(memes_strings.GIFS), caption=f'🧴 *Sanitizes {name}* 🦠')
+        random.choice(SANI_GIFS), caption=f'🧴 *Sanitizes {name}* 🦠')
 	
 	
 #ud
