@@ -59,7 +59,7 @@ from hurry.filesize import size as sizee
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.utils.helpers import escape_markdown, mention_html
 
-GIF_ID = 'CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE'
+GIF_ID = 'https://telegra.ph/file/79883010cd584bfdb8690.mp4'
 
 MARKDOWN_HELP = f"""
 Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
@@ -264,8 +264,8 @@ def shellExecute(bot: Bot, update: Update):
 def sanitize(bot: Bot, update: Update):
     message = update.effective_message
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
-    reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
-    reply_animation(GIF_ID, caption=f'🧴 *Sanitizes* 🦠')
+    reply_video = message.reply_to_message.reply_video if message.reply_to_message else message.reply_video
+    reply_video(GIF_ID, caption=f'🧴 *Sanitizes* 🦠')
 	
 
 	
@@ -273,8 +273,8 @@ def sanitize(bot: Bot, update: Update):
 def sanitize(bot: Bot, update: Update):
     message = update.effective_message
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
-    reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
-    reply_animation(
+    reply_video = message.reply_to_message.reply_video if message.reply_to_message else message.reply_video
+    reply_video(
         random.choice(memes_strings.GIFS), caption=f'🧴 *Sanitizes* 🦠')
 	
 	
