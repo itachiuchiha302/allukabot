@@ -5,8 +5,10 @@ from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, BigInteger
 from alluka.modules.helper_funcs.msg_types import Types
 from alluka.modules.sql import SESSION, BASE
 
-DEFAULT_WELCOME = ["Welcome {first}", "Yoo! {first}", "{first Is Just Appeared!"]
+DEFAULT_WELCOME = "Welcome {first}"
 DEFAULT_GOODBYE = "👋Nice Knowing Ya!"
+
+DEFAULT_WELCOME_MESSAGES = [ "Yoo! {first}", "{first Is Just Appeared!"]
 
 class Welcome(BASE):
     __tablename__ = "welcome_pref2"
