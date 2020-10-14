@@ -59,7 +59,7 @@ from hurry.filesize import size as sizee
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.utils.helpers import escape_markdown, mention_html
 
-GIF_ID = 'CgACAgQAAxkDAAEoqnlfhyZn7XO4b4tTsX48gZwtDF2bKgACaAgAAlZD0VFMQ2yUEjZv_BsE'
+GIF_ID = 'CgACAgQAAx0CU89tcgACBgpfhys3qkFuod5wfq2mlSj94NqfuwACaAgAAlZD0VHcFt2Z4Vw1URsE'
 
 MARKDOWN_HELP = f"""
 Markdown is a very powerful formatting tool supported by telegram. {dispatcher.bot.first_name} has some enhancements, to make sure that \
