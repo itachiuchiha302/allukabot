@@ -169,7 +169,7 @@ SLAP_TEMPLATES = (
     "{user1} hits {user2} with {item}.",
 )
 
-GIFS = ['CgACAgUAAxkDAAEoqndfhyZfr5JyfSr8Sm2LQyoGGur2AQACVQEAAm7T2FbmKpYHSFM8PhsE']
+GIFS = ['CgACAgQAAx0CU89tcgACBgpfhys3qkFuod5wfq2mlSj94NqfuwACaAgAAlZD0VHcFt2Z4Vw1URsE']
 
 
 PING_STRING = (
