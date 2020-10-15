@@ -94,7 +94,7 @@ def pingall(bot: Bot, update: Update):
     reply_msg += "\n".join(pinged_list)
     reply_msg += "\n┗⊸ My Ping : "
     update.effective_message.reply_text(
-        reply_msg, ("{}").format(telegram_ping), parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+        reply_msg, "{}".format(telegram_ping), parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
 PING_HANDLER = DisableAbleCommandHandler("ping", ping)
