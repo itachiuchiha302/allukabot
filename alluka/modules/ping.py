@@ -57,27 +57,29 @@ def ping_func(to_ping: List[str]) -> List[str]:
 
         if each_ping == "Telegram":
             pinged_site = f'<a href="{sites_list[each_ping]}">{each_ping}</a>'
-            ping_time = f"<code>{ping_time} (Status: {r.status_code})</code>"
+            ping_time = f"<code>{ping_time} (Status : {r.status_code})</code>"
 
-        ping_text = f"{pinged_site}: <code>{ping_time}</code>"
+        ping_text = f"╽ \n┣⊸ {pinged_site} : <code>{ping_time}</code>"
         ping_result.append(ping_text)
 
     return ping_result
 
 
-@run_async
-@sudo_plus
+@run_async 
 def ping(bot: Bot, update: Update):
     msg = update.effective_message
 
     start_time = time.time()
-    message = msg.reply_text("Pinging...")
+    message = msg.reply_text("Pinging")
+    message.edit_text("Pinging.")
+    message.edit_text("Pinging..")
     end_time = time.time()
+    message.edit_text("Pinging...")
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
 
     message.edit_text(
         "PONG!!\n"
-        "<b>Time Taken:</b> <code>{}</code>\n".format(telegram_ping),
+        "<b>Time Taken : </b> <code>{}</code>\n".format(telegram_ping),
         parse_mode=ParseMode.HTML)
 
 
@@ -88,11 +90,11 @@ def pingall(bot: Bot, update: Update):
     pinged_list = ping_func(to_ping)
     pinged_list.insert(2, '')
 
-    reply_msg = "⏱Ping results are:\n"
+    reply_msg = "╭─⌈ Ping Results Are \n"
     reply_msg += "\n".join(pinged_list)
-
+    reply_msg += "\n┗⊸ My Ping : "
     update.effective_message.reply_text(
-        reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+        reply_msg, ("{}").format(telegram_ping) parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
 PING_HANDLER = DisableAbleCommandHandler("ping", ping)
