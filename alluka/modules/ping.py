@@ -57,7 +57,7 @@ def ping_func(to_ping: List[str]) -> List[str]:
 
         if each_ping == "Telegram":
             pinged_site = f'<a href="{sites_list[each_ping]}">{each_ping}</a>'
-            ping_time = f"<code>{ping_time} (Status : {r.status_code})</code>"
+            ping_time = f"<code>{ping_time} (Status:{r.status_code})</code>"
 
         ping_text = f"╽ \n┣⊸ {pinged_site} : <code>{ping_time}</code>"
         ping_result.append(ping_text)
@@ -97,7 +97,7 @@ def pingall(bot: Bot, update: Update):
     
     reply_msg = "╭─⌈ Ping Results Are \n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "\n┗⊸ My Ping : <code>{}</code>".format(hinata_ping)
+    reply_msg += "┗⊸ [My Ping](@MissHinata_Bot) : <code>{}</code>".format(hinata_ping)
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
