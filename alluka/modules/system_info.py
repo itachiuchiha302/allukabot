@@ -76,7 +76,7 @@ def status(bot: Bot, update: Update):
 
 
 @run_async
-def speedtst(bot, update, context):
+def speedtst(update, context):
     chat = update.effective_chat
     del_msg = context.bot.send_message(chat.id, "<code>Running speedtest...</code>",
                                parse_mode=ParseMode.HTML)
