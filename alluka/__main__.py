@@ -1,5 +1,6 @@
 import importlib
 import re
+import random
 import datetime
 from typing import Optional, List
 import resource
@@ -22,6 +23,8 @@ import alluka.modules.helper_funcs.panel_string as HELP_PANEL_STRING
 from alluka.modules.connection import connected
 from alluka.modules.connection import connect_button
 
+
+CHAT_START = ['Hmmm', 'Hmmm?', 'Yoo!', 'Hello', 'Hm', 'Hm??']
 
 VERSION = "5.5.2"
 
@@ -134,7 +137,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Yoo! Whatsupp? 🙃")
+        update.effective_message.reply_text(random.choice(CHAT_START))
 
 def send_start(bot, update):
     #Try to remove old message
