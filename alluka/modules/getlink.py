@@ -18,7 +18,7 @@ def getlink(bot: Bot, update: Update, args: List[int]):
         pattern = re.compile(r'-\d+')
     else:
         message.reply_text("You don't seem to be referring to any chats.")
-    links = "╭──⌈ Invite Link Of : "
+    links = "╭─⌈ Invite Link Of :|  "
     for chat_id in pattern.findall(message.text):
         try:
             chat = bot.getChat(chat_id)
