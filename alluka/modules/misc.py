@@ -113,7 +113,7 @@ def birthday(bot: Bot, update: Update, args: List[str]):
     bot.sendChatAction(update.effective_chat.id, "typing")
     for _ in range(5):
         bdaymessage = random.choice(BDAY_WISH)
-        update.effective_message.reply_text(bdaymessage + username)
+        update.effective_message.reply_text('(bdaymessage) \n (username)')
 
 	
 # lyrics module 
