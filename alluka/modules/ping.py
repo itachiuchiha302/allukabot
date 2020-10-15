@@ -3,7 +3,7 @@ from typing import List
 
 import requests
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext, run_async
+from telegram.ext import run_async
 
 from alluka import StartTime, dispatcher
 from alluka.modules.helper_funcs.chat_status import sudo_plus
