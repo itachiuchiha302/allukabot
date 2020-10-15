@@ -11,7 +11,6 @@ from alluka.modules.helper_funcs.chat_status import is_user_ban_protected, bot_a
 import alluka.modules.sql.users_sql as sql
 from alluka import dispatcher, OWNER_ID, LOGGER
 from alluka.modules.helper_funcs.filters import CustomFilters
-from alluka.modules.sql.users_sql import get_all_chats
 
 USERS_GROUP = 4
 
@@ -79,33 +78,13 @@ def snipe(bot: Bot, update: Update, args: List[str]):
             
             
             
-@run_async
-def snipeall(bot: Bot, update: Update, args: List[str]):
-    try:
-        chat_id = str(args[get_all_chats])
-        del args[get_all_chats]
-    except TypeError as excp:
-        update.effective_message.reply_text("Please give me a chat to echo to!")
-    to_send = " ".join(args)
-    if len(to_send) >= 2:
-        try:
-            bot.sendMessage(int(chat_id), str(to_send))
-        except TelegramError:
-            LOGGER.warning("Couldn't send to group %s", str(chat_id))
-            update.effective_message.reply_text("Couldn't send the message. Perhaps I'm not part of that group?")
-
-
-
-
-
-SNIPEALL_HANDLER = CommandHandler("snipeall", snipeall, pass_args=True, filters=CustomFilters.sudo_filter)
 SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=CustomFilters.sudo_filter)
 BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
 QUICKSCOPE_HANDLER = CommandHandler("quickscope", quickscope, pass_args=True, filters=CustomFilters.sudo_filter)
 QUICKUNBAN_HANDLER = CommandHandler("quickunban", quickunban, pass_args=True, filters=CustomFilters.sudo_filter)
 
 
-dispatcher.add_handler(SNIPEALL_HANDLER)
+
 dispatcher.add_handler(SNIPE_HANDLER)
 dispatcher.add_handler(BANALL_HANDLER)
 dispatcher.add_handler(QUICKSCOPE_HANDLER)
