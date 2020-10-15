@@ -77,9 +77,8 @@ def ping(bot: Bot, update: Update):
     message.edit_text("Pinging..")
     end_time = time.time()
     message.edit_text("Pinging...")
-    telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
-
-    bot.sendChatAction(update.effective_chat.id, "typing")
+    telegram_ping = str(round((end_time - start_time) * 1000, 3)) 
+    
     message.edit_text(
         "PONG!!\n"
         "<b>Time Taken : </b> <code>{}</code>\n".format(telegram_ping),
