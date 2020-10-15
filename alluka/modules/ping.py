@@ -2,7 +2,7 @@ import time
 from typing import List
 
 import requests
-from telegram import Bot, Update
+from telegram import Bot, Update, ParseMode
 from telegram.ext import run_async
 
 from alluka import dispatcher
