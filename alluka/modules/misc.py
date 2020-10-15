@@ -85,7 +85,7 @@ This will create two buttons on a single line, instead of one button per line.
 Keep in mind that your message <b>MUST</b> contain some text other than just a button!
 """
 
-BDAY_WISH = ['HAPPY BIRTHDAY', 'HAPPY BDAY', 'Manny Manny Returns Of The Day', 'Bhai Party']
+BDAY_WISH = ['HAPPY BIRTHDAY ', 'HAPPY BDAY ', 'Manny Manny Returns Of The Day ', 'Bhai Party ']
 
 jikan = Jikan()
 
@@ -113,7 +113,7 @@ def birthday(bot: Bot, update: Update, args: List[str]):
     bot.sendChatAction(update.effective_chat.id, "typing")
     for _ in range(5):
         bdaymessage = random.choice(BDAY_WISH)
-        update.effective_message.reply_text('(bdaymessage) \n (username)')
+        update.effective_message.reply_text(bdaymessage + username)
 
 	
 # lyrics module 
