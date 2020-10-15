@@ -95,9 +95,9 @@ def pingall(bot: Bot, update: Update):
     
     reply_msg = "╭─⌈ Ping Results Are \n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "\n┗⊸ My Ping : "
+    reply_msg += "\n┗⊸ My Ping : <code>{}</code>".format(hinata_ping)
     update.effective_message.reply_text(
-        reply_msg, "<code>{}</code>".format(hinata_ping), parse_mode=ParseMode.HTML, disable_web_page_preview=True)
+        reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
 
 PING_HANDLER = DisableAbleCommandHandler("ping", ping)
