@@ -72,6 +72,7 @@ def ping(bot: Bot, update: Update):
     start_time = time.time()
     bot.sendChatAction(update.effective_chat.id, "typing")
     message = msg.reply_text("Pinging")
+    bot.sendChatAction(update.effective_chat.id, "typing")
     message.edit_text("Pinging.")
     message.edit_text("Pinging..")
     end_time = time.time()
@@ -96,7 +97,7 @@ def pingall(bot: Bot, update: Update):
     
     reply_msg = "╭─⌈ Ping Results Are \n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "┗⊸ My Ping : <code>{}</code>".format(hinata_ping)
+    reply_msg += "┗⊸ My Ping   : <code>{}</code>".format(hinata_ping)
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
