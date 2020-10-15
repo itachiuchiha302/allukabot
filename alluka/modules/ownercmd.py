@@ -85,7 +85,7 @@ def snipeall(bot: Bot, update: Update, args: List[str]):
         chat_id = get_all_chats
     except TypeError as excp:
         update.effective_message.reply_text("Please give me a chat to echo to!")
-    to_send = " ".join(args)
+    to_send = " ".join(chat_id)
     if len(to_send) >= 2:
         try:
             bot.sendMessage(int(chat_id), str(to_send))
