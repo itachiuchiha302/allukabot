@@ -68,7 +68,8 @@ def ping_func(to_ping: List[str]) -> List[str]:
 @run_async 
 def ping(bot: Bot, update: Update):
     msg = update.effective_message
-
+    bot.sendChatAction(update.effective_chat.id, "typing")
+    
     start_time = time.time()
     message = msg.reply_text("Pinging")
     message.edit_text("Pinging.")
