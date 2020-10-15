@@ -68,16 +68,15 @@ def ping_func(to_ping: List[str]) -> List[str]:
 @run_async 
 def ping(bot: Bot, update: Update):
     msg = update.effective_message
-    bot.sendChatAction(update.effective_chat.id, "typing")
     
     start_time = time.time()
+    bot.sendChatAction(update.effective_chat.id, "typing")
     message = msg.reply_text("Pinging")
     message.edit_text("Pinging.")
-    bot.sendChatAction(update.effective_chat.id, "typing")
     message.edit_text("Pinging..")
     end_time = time.time()
     message.edit_text("Pinging...")
-    telegram_ping = str(round((end_time - start_time) * 1000, 3)) 
+    telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     
     message.edit_text(
         "PONG!!\n"
@@ -97,7 +96,7 @@ def pingall(bot: Bot, update: Update):
     
     reply_msg = "╭─⌈ Ping Results Are \n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "┗⊸ [My Ping](@MissHinata_Bot) : <code>{}</code>".format(hinata_ping)
+    reply_msg += "┗⊸ My Ping : <code>{}</code>".format(hinata_ping)
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
