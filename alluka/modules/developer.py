@@ -18,7 +18,7 @@ def leave(bot: Bot, update: Update, args: List[str]):
     if args:
         chat_id = str(args[0])
         try:
-            bot.send_message("chat_id, Good Bye Noobs")
+            bot.send_message(chat_id, "Good Bye Noobs", parse_mode=ParseMode.HTML)
             bot.leave_chat(int(chat_id))
             update.effective_message.reply_text("I left that chat!.")
         except TelegramError:
