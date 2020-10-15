@@ -93,11 +93,11 @@ def pingall(bot: Bot, update: Update):
     pinged_list.insert(2, '')
     start_time = time.time()
     end_time = time.time()
-    hinata_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
+    hinata_ping = str(round((end_time - start_time) * 1000, 3)) 
     
     reply_msg = "╭─⌈ Ping Results Are \n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "┗⊸ My Ping   : <code>{}</code>".format(hinata_ping)
+    reply_msg += "┗⊸ Time Taken : <code>{}</code>".format(hinata_ping)
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
 
