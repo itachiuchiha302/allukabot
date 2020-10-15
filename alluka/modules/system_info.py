@@ -34,7 +34,7 @@ def status(bot: Bot, update: Update):
 	chat = update.effective_chat
 	
 	stat = "--- System Status ---\n"
-	stat += "alluka Version: `5.5.2`""\n"
+	stat += "Hinata Version: `2.1.5`""\n"
 	stat += "Python Version: `"+python_version()+"`\n"
 	stat += "GitHub API Version: `"+str(git.vercheck())+"`\n"
 	#Software Info
@@ -76,7 +76,7 @@ def status(bot: Bot, update: Update):
 
 
 @run_async
-def speedtst(update, context):
+def speedtst(bot, update, context):
     chat = update.effective_chat
     del_msg = context.bot.send_message(chat.id, "<code>Running speedtest...</code>",
                                parse_mode=ParseMode.HTML)
