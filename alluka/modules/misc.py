@@ -85,6 +85,7 @@ This will create two buttons on a single line, instead of one button per line.
 Keep in mind that your message <b>MUST</b> contain some text other than just a button!
 """
 
+BDAY_WISH = ['HAPPY BIRTHDAY', 'HAPPY BDAY', 'Manny Manny Returns Of The Day', 'Bhai Party']
 
 jikan = Jikan()
 
@@ -103,7 +104,18 @@ opener = urllib.request.build_opener()
 useragent = 'Mozilla/5.0 (Linux; Android 6.0.1; SM-G920V Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.98 Mobile Safari/537.36'
 opener.addheaders = [('User-agent', useragent)]
 
+#birthday
+@run_async
+def birthday(bot: Bot, update: Update, args: List[str]):
+    if args:
+        username = str(",".join(args))
+    # Bot typing before send messages
+    bot.sendChatAction(update.effective_chat.id, "typing")
+    for _ in range(5):
+        bdaymessage = random.choice(BDAY_WISH)
+        update.effective_message.reply_text(bdaymessage + username)
 
+	
 # lyrics module 
 @run_async
 def lyrics(bot: Bot, update: Update, args):
