@@ -18,20 +18,20 @@ def getlink(bot: Bot, update: Update, args: List[int]):
         pattern = re.compile(r'-\d+')
     else:
         message.reply_text("You don't seem to be referring to any chats.")
-    links = "Invite Link Of : "
+    links = "╭──⌈ Invite Link Of : "
     for chat_id in pattern.findall(message.text):
         try:
             chat = bot.getChat(chat_id)
             bot_member = chat.get_member(bot.id)
             if bot_member.can_invite_users:
                 invitelink = bot.exportChatInviteLink(chat_id)
-                links += str(chat_id) + "\n" + " ` {invitelink} `" + "\n"
+                links += str(chat_id) + "\n┋ \n╰╼> " + invitelink + "\n"
             else:
-                links += str(chat_id) + "\nI don't have access to the invite link." + "\n"
+                links += str(chat_id) + "\n┋ \n╰╼> \n I don't have access to the invite link." + "\n"
         except BadRequest as excp:
-                links += str(chat_id) + "\n" + excp.message + "\n"
+                links += str(chat_id) + "\n┋ \n╰╼> \n" + excp.message + "\n"
         except TelegramError as excp:
-                links += str(chat_id) + "\n" + excp.message + "\n"
+                links += str(chat_id) + "\n┋ \n╰╼> \n" + excp.message + "\n"
 
     message.reply_text(links)
 
