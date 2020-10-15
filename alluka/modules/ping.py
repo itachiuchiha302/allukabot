@@ -2,7 +2,7 @@ import time
 from typing import List
 
 import requests
-from telegram import ParseMode, Update
+from telegram import Update
 from telegram.ext import run_async
 
 from alluka import StartTime, dispatcher
@@ -74,12 +74,10 @@ def ping(bot: Bot, update: Update):
     message = msg.reply_text("Pinging...")
     end_time = time.time()
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
-    uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
         "PONG!!\n"
-        "<b>Time Taken:</b> <code>{}</code>\n"
-        "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
+        "<b>Time Taken:</b> <code>{}</code>\n".format(telegram_ping),
         parse_mode=ParseMode.HTML)
 
 
@@ -89,11 +87,9 @@ def pingall(bot: Bot, update: Update):
     to_ping = ["Telegram"]
     pinged_list = ping_func(to_ping)
     pinged_list.insert(2, '')
-    uptime = get_readable_time((time.time() - StartTime))
 
     reply_msg = "⏱Ping results are:\n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += '\n<b>Service uptime:</b> <code>{}</code>'.format(uptime)
 
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True)
