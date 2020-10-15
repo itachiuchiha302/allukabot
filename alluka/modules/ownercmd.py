@@ -11,6 +11,7 @@ from alluka.modules.helper_funcs.chat_status import is_user_ban_protected, bot_a
 import alluka.modules.sql.users_sql as sql
 from alluka import dispatcher, OWNER_ID, LOGGER
 from alluka.modules.helper_funcs.filters import CustomFilters
+from alluka.modules.sql.users_sql import get_all_chats
 
 USERS_GROUP = 4
 
@@ -81,7 +82,7 @@ def snipe(bot: Bot, update: Update, args: List[str]):
 @run_async
 def snipeall(bot: Bot, update: Update, args: List[str]):
     try:
-        chat_id = 
+        chat_id = get_all_chats
     except TypeError as excp:
         update.effective_message.reply_text("Please give me a chat to echo to!")
     to_send = " ".join(args)
