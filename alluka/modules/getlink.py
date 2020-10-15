@@ -25,7 +25,7 @@ def getlink(bot: Bot, update: Update, args: List[int]):
             bot_member = chat.get_member(bot.id)
             if bot_member.can_invite_users:
                 invitelink = bot.exportChatInviteLink(chat_id)
-                links += str(chat_id) + "\n" + invitelink + "\n"
+                links += str(chat_id) + "\n" + " ` {invitelink} `" + "\n"
             else:
                 links += str(chat_id) + "\nI don't have access to the invite link." + "\n"
         except BadRequest as excp:
