@@ -16,7 +16,7 @@ from alluka.modules.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
-TIME = 0.0
+TIME = time.time()
 
 def time_formatter(seconds: float) -> str:
     """ humanize time """
