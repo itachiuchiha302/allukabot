@@ -16,14 +16,15 @@ from alluka.modules.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
-TIME = time.time()
+TIME = 0.0
 
 def time_formatter(seconds: float) -> str:
     """ humanize time """
     minutes, seconds = divmod(int(seconds), 60)
     hours, minutes = divmod(minutes, 60)
     days, hours = divmod(hours, 24)
-    tmp = ((str(days) + "Days, ") if hours else "") + \
+    weeks, days = divmod(days, 30)
+    tmp = ((str(days) + "Days, ") if days else "") + \
         ((str(hours) + "h:") if hours else "") + \
         ((str(minutes) + "m:") if minutes else "") + \
         ((str(seconds) + "s ") if seconds else "")
